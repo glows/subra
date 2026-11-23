@@ -1,0 +1,32 @@
+{
+  "name": "Subra",
+  "id": "com.subra.app",
+  "version": "1.0.0",
+  "build": 1,
+  "icon": {
+    "macos": "assets/icon-macos.png",
+    "windows": "assets/icon-macos.png",
+    "linux": "assets/icon-macos.png",
+    "ios": "assets/icon.png",
+    "android": "assets/icon.png",
+    "web": "assets/icon-macos.png"
+  },
+  "rust": ".",
+  "appearance": "dark",
+  "window": {
+    "title": "Subra",
+    "defaultSize": { "width": 1180, "height": 760 },
+    "minSize": { "width": 920, "height": 600 },
+    "titleBar": { "style": "hidden" }
+  },
+  "capabilities": {
+    "application": true,
+    "statusBar": true,
+    "fs": {
+      "read": ["${homeDir}/Movies", "${dataDir}"]
+    },
+    "network": {
+      "hosts": ["*"]
+    }
+  }
+}

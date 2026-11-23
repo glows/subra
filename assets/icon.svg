@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <!-- Deep warm obsidian background gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#25231F" />
+      <stop offset="55%" stop-color="#171614" />
+      <stop offset="100%" stop-color="#0E0D0C" />
+    </linearGradient>
+
+    <!-- Subtle warm studio glow behind the glyph -->
+    <radialGradient id="ambientGlow" cx="50%" cy="44%" r="48%">
+      <stop offset="0%" stop-color="#F0A33A" stop-opacity="0.26" />
+      <stop offset="55%" stop-color="#E89E38" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#E89E38" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Luminous amber-gold play glyph gradient -->
+    <linearGradient id="amberGrad" x1="15%" y1="5%" x2="85%" y2="95%">
+      <stop offset="0%" stop-color="#FFD07B" />
+      <stop offset="45%" stop-color="#F2A73B" />
+      <stop offset="100%" stop-color="#D47B16" />
+    </linearGradient>
+
+    <!-- Secondary warm gold bar gradient -->
+    <linearGradient id="barGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F6B856" />
+      <stop offset="100%" stop-color="#DC871E" />
+    </linearGradient>
+
+    <!-- Soft drop shadow for tactile depth -->
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#000000" flood-opacity="0.55" />
+    </filter>
+  </defs>
+
+  <!-- Full-bleed square canvas (OS applies squircle mask) -->
+  <rect width="1024" height="1024" fill="url(#bgGrad)" />
+  <rect width="1024" height="1024" fill="url(#ambientGlow)" />
+
+  <!-- Subtle inner glass frame -->
+  <rect
+    x="116"
+    y="116"
+    width="792"
+    height="792"
+    rx="184"
+    fill="#1E1D1A"
+    fill-opacity="0.45"
+    stroke="#FFFFFF"
+    stroke-opacity="0.07"
+    stroke-width="3"
+  />
+
+  <!-- Center motif: Rounded Play Triangle + Dual Subtitle Bars -->
+  <g filter="url(#softShadow)">
+    <!-- Rounded geometric play triangle -->
+    <path
+      d="M 392 270
+         C 392 238, 427 219, 454 236
+         L 686 382
+         C 712 398, 712 436, 686 452
+         L 454 598
+         C 427 615, 392 596, 392 564
+         Z"
+      fill="url(#amberGrad)"
+    />
+
+    <!-- Primary subtitle bar -->
+    <rect x="272" y="676" width="480" height="44" rx="22" fill="url(#barGrad)" />
+
+    <!-- Secondary bilingual subtitle bar -->
+    <rect x="352" y="746" width="320" height="36" rx="18" fill="#F2E9DA" fill-opacity="0.72" />
+  </g>
+</svg>
